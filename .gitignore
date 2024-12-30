@@ -1,0 +1,35 @@
+# General ignore rules for all folders
+node_modules/
+logs/
+dist/
+build/
+.env
+.DS_Store
+Thumbs.db
+
+# Ignore files specific to the server folder
+/server/node_modules/
+/server/logs/
+/server/.env
+/server/dist/
+
+# Ignore files specific to the client folder
+/client/node_modules/
+/client/logs/
+/client/.env
+/client/build/
+/client/coverage/
+
+# Temporary or editor files
+*.swp
+*.lock
+*.tmp
+*.bak
+*.old
+
+# IDE/editor configurations
+.vscode/
+.idea/
+*.suo
+*.njsproj
+*.sln
