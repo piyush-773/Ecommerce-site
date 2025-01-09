@@ -1,9 +1,8 @@
-import React from 'react'
+import React from "react";
+import Hero from "../components/Home/Hero"
 
-function Home() {
-  return (
-    <div>Home</div>
-  )
-}
+const Home = () => {
+    return <div className="px-10 py-8"><Hero/></div>;
+};
 
-export default Home
+export default Home;
