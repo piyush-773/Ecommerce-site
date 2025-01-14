@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import ProductCard from "../components/ProductCard/ProductCard";
-
-const AllProducts = () => {
+import ProductCard from "../ProductCard/ProductCard";
+const RecentProducts = () => {
     const [data, setData] = useState();
     useEffect(() => {
         const fetch = async () => {
@@ -14,8 +13,8 @@ const AllProducts = () => {
         fetch();
     }, []);
     return (
-        <div className="h-auto mt-8 px-12 py-8">
-            <h4 className="text-2xl">All products</h4>
+        <div className="mt-8 px-4">
+            <h4 className="text-2xl">Recent products</h4>
             <div className="my-4 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-2">
                 {data &&
                     data.map((item, index) => (
@@ -28,4 +27,4 @@ const AllProducts = () => {
     );
 };
 
-export default AllProducts;
+export default RecentProducts;

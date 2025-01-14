@@ -152,6 +152,19 @@ router.get("/get-all-products", async (req, res) => {
     }
 });
 
+router.get("/get-recent-products", async (req, res) => {
+    try {
+        const products = await Product.find().sort({ createdAt: -1 }).limit(4);
+        return res.json({
+            message: "Recent products fetched successfully",
+            data: products,
+        });
+    } catch (error) {
+        console.error("Error fetching recent products:", error);
+        return res.status(500).json({ message: "Internal server error" });
+    }
+});
+
 router.get("/get-product/:id", async (req, res) => {
     try {
         const productId = req.params.id; // Access the 'id' parameter
